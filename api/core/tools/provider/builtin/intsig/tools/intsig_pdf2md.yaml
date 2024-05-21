@@ -1,0 +1,66 @@
+identity:
+  name: intsig_pdf2md
+  author: Zane
+  label:
+    en_US: PDFs to markdown
+    zh_Hans: pdf转markdown
+    pt_BR: PDFs to markdown
+icon: icon.png
+description:
+  human:
+    en_US: A tool to quickly and easily convert PDFs and images to markdown.
+    zh_Hans: 将pdf和图像快速轻松地转换为markdown的工具。
+    pt_BR: A tool to quickly and easily convert PDFs and images to markdown.
+  llm: A tool convert PDFs and images to markdown. you should input the image id as the input of this tool. the image id can be got from parameters.
+
+parameters:
+  - name: mode
+    type: select
+    required: true
+    options:
+      - value: base64
+        label:
+          en_US: The base64 string of the file as input
+          zh_Hans: 将文件的base64字符串作为输入
+          pt_BR: The base64 string of the file as input
+      - value: image
+        label:
+          en_US: Use the generated image as input
+          zh_Hans: 将生成的图片作为输入
+          pt_BR: Use the generated image as input
+    default: base64
+    label:
+      en_US: Mode
+      zh_Hans: 模式
+      pt_BR: Mode
+    human_description:
+      en_US: When selecting to use the file_base64 as input, you need to input the base64 string of the PDF or image
+      zh_Hans: 当选择将文件的base64字符串作为输入时, 需要输入pdf或图像的base64字符串, 
+      pt_BR: When selecting to use the file_base64 as input, you need to input the base64 string of the PDF or image
+    form: form
+  - name: file_base64
+    type: string
+    required: false
+    label:
+      en_US: file_base64
+      zh_Hans: base64字符串
+      pt_BR: file_base64
+    human_description:
+      en_US: Base64 of PDFs or image
+      zh_Hans: 输入pdf或图像的base64字符串
+      pt_BR: Base64 of PDFs or image
+    form: form
+  - name: timeout
+    type: number
+    required: true
+    human_description:
+      en_US: request timeout
+      zh_Hans: 请求超时
+      pt_BR: request timeout
+    label:
+      en_US: request timeout
+      zh_Hans: 请求超时
+      pt_BR: request timeout
+    form: form
+    min: 1
+    default: 60

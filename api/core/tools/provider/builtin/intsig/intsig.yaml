@@ -1,0 +1,44 @@
+identity:
+  name: intsig
+  author: Zane
+  label:
+    en_US: Pdf2md
+    zh_Hans: 合合pdf转markdown工具
+    pt_BR: Pdf2md
+  description:
+    en_US: A tool to quickly and easily convert PDFs and images to markdown.
+    zh_Hans: 将 pdf 和 图像 快速轻松地转换为 markdown 的工具。
+    pt_BR: A tool to quickly and easily convert PDFs and images to markdown.
+  icon: icon.png
+credentials_for_provider:
+  intsig_app_id:
+    type: secret-input
+    required: true
+    label:
+      en_US: Please input your x-ti-app-id
+      zh_Hans: 请输入你的 x-ti-app-id
+      pt_BR: Please input your x-ti-app-id
+    placeholder:
+      en_US: Please input your x-ti-app-id
+      zh_Hans: 请输入你的 x-ti-app-id
+      pt_BR: Please input your x-ti-app-id
+    help:
+      en_US: Get your x-ti-app-id from textin.com
+      zh_Hans: 从 textin.com 获取您的 x-ti-app-id
+      pt_BR: Get your x-ti-app-id from textin.com
+  intsig_secret_code:
+    type: secret-input
+    required: true
+    label:
+      en_US: Please input your x-ti-secret-code
+      zh_Hans: 请输入你的 x-ti-secret-code
+      pt_BR: Please input your x-ti-secret-code
+    placeholder:
+      en_US: Please input your x-ti-secret-code
+      zh_Hans: 请输入你的 x-ti-secret-code
+      pt_BR: Please input your x-ti-secret-code
+    help:
+      en_US: Get your x-ti-secret-code from textin.com
+      zh_Hans: 从 textin.com 获取您的 x-ti-secret-code
+      pt_BR: Get your x-ti-secret-code from textin.com
+    url: https://www.textin.com/market/detail/pdf_to_markdown
